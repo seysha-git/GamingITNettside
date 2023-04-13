@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../../Styling/Pages/WordWar.css">
+</head>
+<body>
+    <header class="blurBackground">
+        <nav class="frontNav">
+            <div class="userInfo">
+                <div id="userIcon">
+                      <i class="fa-solid fa-circle-user fa-2x" id="userIcon"></i>
+                </div>
+                <h3><span id="userName">Lag din profil</span> <span id="userPoints"></span></h3>
+            </div>
+            <div class="settingIcon">
+                <i class="fa-solid fa-bars fa-2x" id="settingI"></i>
+            </div>
+        </nav>
+    </header>
+        <!-- Start Modal-->
+    <figure>
+        <div class="modalFigure" id="startModal" >
+            <div class="modalHeader">
+                <h2>
+                    Klar?, la os begynne!!!
+                </h2>    
+                <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+            </div>
+            <div class="modalInfo">
+                <p>
+                    Lag ord and tjen poeng for å vinne.
+                    Du må tjene hele 5 poeng for å tjene hele poeng summen og komme ut på toppen!!
+                   </p>
+            </div>
+            <div class="modalBtn">
+                <button class="signIn titleEffect" type="button">Begynn å spill</button>
+            </div>
+        </div>
+    </figure>
+        <!-- Finish Modal-->
+    <figure>
+        <div class="modalFigure" id="finishModal" >
+            <div class="modalHeader">
+                <h2 id="finishTitle"></h2>
+            </div>
+            <div class="modalInfo">
+                <p id="finishPara"></p>
+            </div>
+            <div class="modalBtn" id="finishButtons">
+                <button class="signIn titleEffect" id="Again" type="button">Igjen</button>
+                <a href="../../index.html">
+                    <button class="signIn titleEffect" type="button">Hjem</button>
+                </a>
+            </div>
+            </div>
+        </div>
+    </figure>
+        <!-- Settings Modal-->
+    <figure>
+        <div class="modalFigure" id="settingModal">
+            <div class="modalHeader" id="settingHeader">
+                <h2>Vår meny</h2>
+                <div class="exitSetting">
+                    <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+                </div>
+                
+            </div>
+            <div class="modalLogIn" id="settingContent">
+                <div class="homeOption">
+                    <a href="https://viken.no/nadderud-vgs/">
+                        <h2>Spill historie</h2>
+                    </a>
+                  
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html">
+                        <h2>Hjem</h2>
+                    </a>
+                   
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html" id="signOut">
+                        <h2>Logg ut</h2>
+                    </a>
+                   
+                </div>
+        </div>
+        <div class="settingText">
+            <p>"If you have any questions or need further assistance, please don't hesitate to contact me at [your email address].</p>
+        </div>
+    </figure>
+    <main  class="blurBackground">
+        <div class="gameSection">
+            <div class="gameTitle">
+                <h1>Word War</h1>
+            </div>
+            <div class="gameContainer">
+                <div class="containerTitle">
+                    <h1>Gjett ordet</h1>
+                </div>
+                <div class="containerContent">
+                    <p id="word">expanios</p>
+                    <div class="details">
+                        <p class="hint">Hint: <span>The process of burying a apple</span></p>
+                        <div class="subDetails">
+                            <p class="time">Tid igjen: <span><b id="time">30</b><b>s</b></span></p>
+                            <p class="score">Stilling: <span>0</span>/<span>5</span></p>
+                        </div>
+                    </div>
+                    <div class="inputWord">
+                        <input type="text" placeholder="Enter a valid word">
+                    </div>
+                    <div class="buttons">
+                        <button class="refresh-word">Nytt ord</button>
+                        <button class="check-word">Valider ordet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="blurBackground">
+        <div class="footerSection">
+            <div class="footerHeader">
+                <h1>SS</h1>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js-script/GamesJs/WordWar.js"></script>
+    <script src="../../js-script/GamesJs/ModalGames.js"></script>
+   
+</body>

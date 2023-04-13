@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../../Styling/Pages/MemoryMatch.css">
+</head>
+<body>
+    <header class="blurBackground">
+        <nav class="frontNav">
+            <div class="userInfo">
+                <div id="userIcon">
+                      <i class="fa-solid fa-circle-user fa-2x" id="userIcon"></i>
+                </div>
+                <h3><span id="userName">Lag din profil</span> <span id="userPoints"></span></h3>
+            </div>
+            <div class="settingIcon">
+                <i class="fa-solid fa-bars fa-2x" id="settingI"></i>
+            </div>
+        </nav>
+    </header>
+       <!-- Start Modal-->
+       <figure>
+        <div class="modalFigure" id="startModal" >
+            <div class="modalHeader">
+                <h2>
+                    Hei, la oss begynne å spille!
+                </h2>    
+                <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+            </div>
+            <div class="modalInfo">
+                <p>
+                    Hvis du klarer å hente alle parrene, vil du tjene 500 poeng.
+                    Du har bare 30 sek på deg, så vær rask og så presis som du kan
+                   <p>
+            </div>
+            <div class="modalBtn">
+                <button class="signIn titleEffect" type="button">Start playing</button>
+            </div>
+        </div>
+    </figure>
+       <!-- Finish Modal-->
+    <figure>
+        <div class="modalFigure" id="finishModal" >
+            <div class="modalHeader">
+                <h2 id="finishTitle"></h2>
+            </div>
+            <div class="modalInfo">
+                <p id="finishPara"></p>
+            </div>
+            <div class="modalBtn" id="finishButtons">
+                <a href="./MemoryMatch.html">
+                    <button class="signIn titleEffect" id="Again" type="button">Again</button>
+                </a>
+                <a href="../../index.html">
+                    <button class="signIn titleEffect" type="button">Home</button>
+                </a>
+            </div>
+            </div>
+        </div>
+    </figure>
+       <!-- Settings Modal-->
+    <figure>
+        <div class="modalFigure" id="settingModal">
+            <div class="modalHeader" id="settingHeader">
+                <h2>Vår menu</h2>
+                <div class="exitSetting">
+                    <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+                </div>
+                
+            </div>
+            <div class="modalLogIn" id="settingContent">
+                <div class="homeOption">
+                    <a href="https://viken.no/nadderud-vgs/">
+                        <h2>Spill historie</h2>
+                    </a>
+                  
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html">
+                        <h2>Hjem</h2>
+                    </a>
+                   
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html" id="signOut">
+                        <h2>Logg ut</h2>
+                    </a>
+                   
+                </div>
+        </div>
+        <div class="settingText">
+            <p>"If you have any questions or need further assistance, please don't hesitate to contact me at [your email address].</p>
+        </div>
+    </figure>
+    <main class="blurBackground">
+        <div class="gameSection">
+            <div class="gameTitle">
+                <h1>IT Memory</h1>
+            </div>
+            <div class="gameContainer">
+                <ul class="cards ulList">
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="mouse">
+                            <h2>Mus</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="gpu">
+                            <img src="../../Images/Games/MemoryMatch/img-2.jpg">
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="gpu">
+                            <h2>GPU</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="hdd">
+                            <img src="../../Images/Games/MemoryMatch/img-3.jpg">
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="motherboard">
+                            <img src="../../Images/Games/MemoryMatch/img-4.jpg">
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="motherboard">
+                            <h2>Brett</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="ram">
+                            <img src="../../Images/Games/MemoryMatch/img-6.jpg">
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="mouse">
+                            <img src="../../Images/Games/MemoryMatch/img-5.jpg">
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="hdd">
+                            <h2>HDD</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="cpu">
+                            <h2>CPU</h2>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="ram">
+                            <h2>RAM</h2>
+                        </div>
+                    </li>
+                    <li class="card">   
+                        <div class="view front-view">
+                            <span class="questionIcon"><i class="fa-solid fa-question fa-2x"></i></span>
+                        </div>
+                        <div class="view back-view" id="cpu">
+                            <img src="../../Images/Games/MemoryMatch/img-1.jpg">
+                        </div>
+                    </li>
+                </ul>
+                <div class="cards-score">
+                    <h2 >Tid: <span id="time"></span></h2>
+                    <h2>|</h2>
+                    <h2>Trekk: <span id="flips"></span></h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerSection">
+            <div class="footerHeader">
+                <h1>SS</h1>
+            </div>
+        </div>
+    </footer class="blurBackground">
+    <script src="../../js-script/GamesJs/MemoryMatch.js"></script>
+    <script src="../../js-script/GamesJs/ModalGames.js"></script>
+</body>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./Styling/Pages/index.css">
+</head>
+<body>
+    <div class="loader" onload="loadIn()"></div>
+    <header>
+        <nav class="frontNav">
+            <div class="userInfo">
+                <div id="userIcon">
+                      <i class="fa-solid fa-circle-user fa-2x" id="userIcon"></i>
+                </div>
+                <h3><span id="userName">Lag din profil</span> <span id="userPoints"></span></h3>
+            </div>
+            <div class="settingIcon">
+                <i class="fa-solid fa-bars fa-2x" id="settingI"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign in Modal-->
+    <figure>
+        <div class="modalFigure">
+            <div class="modalHeader">
+                <i class="fa-solid fa-headset fa-3x"></i>
+                <h2>Kom i gang</h2>
+                <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+            </div>
+            <div class="modalLogIn">
+                <form>
+                    <div class="modalInput">
+                        <h2>Brukernavn:</h2>
+                        <input type="text" id="userNameInput" name="Seyon" placeholder="Minimum 5 letters">
+                    </div>
+                    <div class="modalAvatar">
+                        <div class="avatarTitle">
+                            <h2>Velg din egen avatar</h2>
+                        </div>
+                        <div class="avatarOptions">
+                            <div class="avatar" id="avatarGif">
+                                <img src="./Images/Avatars/avatarGif.png" height="45px" width="45px" class="avatarIcon" />
+                            </div>
+                            <div class="avatar"  id="avatarElf">
+                                <img src="./Images/Avatars/avatarElf.png" height="45px" width="45px" class="avatarIcon" />
+                            </div>
+                            <div class="avatar"  id="avatarDog">
+                                <img src="./Images/Avatars/avatarDog.png" height="45px" width="45px" class="avatarIcon" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modalBtn">
+                <button class="signIn titleEffect" type="button">Logg inn</button>
+            </div>
+        </div>
+    </figure>
+     <!-- Menu Modal-->
+    <figure>
+        <div class="modalFigure" id="settingModal">
+            <div class="modalHeader" id="settingHeader">
+                <h2>Vår meny</h2>
+                <div class="exitSetting">
+                    <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+                </div>
+                
+            </div>
+            <div class="modalLogIn" id="settingContent">
+                <div class="homeOption">
+                    <a href="https://viken.no/nadderud-vgs/">
+                        <h2>Spill historie</h2>
+                    </a>
+                  
+                </div>
+                <div class="homeOption">
+                    <a href="./index.html">
+                        <h2>Hjem</h2>
+                    </a>
+                   
+                </div>
+                <div class="homeOption" id="signOut">
+                    <a href="./index.html">
+                        <h2>Logg ut</h2>
+                    </a>
+                   
+                </div>
+        </div>
+        <div class="settingText">
+            <p>"If you have any questions or need further assistance, please don't hesitate to contact me at seyontennis@gmail.com.</p>
+        </div>
+    </figure>
+
+    <main>
+        <div class="mainSection">
+            <section class="mainTop">
+                <div class="welcomeMain">
+                    <h1><strong style="color:rgb(81, 30, 175)" class="titleEffect" id="title">IT Gaming;</strong> <span id="subTitle">Lær om IT-faget gjennom spillutvalget vårt</span></h1>
+                    <p>Prøv ut noen av spillene nedenfor i utvalget!</p>
+                </div>
+                <div class="leaderboardMain">
+                    <div class="leaderboardTitle">
+                        <h2>Prestasjoner</h2>
+                        <i class="fa-solid fa-crown fa-2x fa-flip"></i>
+                    </div>
+                    <div class="leaderboardRanking" id="ranking">
+                    </div>
+                </div>
+            </section>
+            <section class="mainBottom">
+                <div class="selectionHeader">
+                    <div class="selectionTitle">
+                        <h1>Vårt spillutvalg</h1>
+                    </div>
+                    <div class="scrollOptions">
+                        <i class="fa-solid fa-arrow-left" id="left"></i>
+                        <i class="fa-solid fa-arrow-right" id="right"></i>
+                    </div>
+                </div>
+                <div class="selectionGames">
+                    <div class="selectionGame">
+                        <a href="./Pages/GamesHtml/MemoryMatch.html">
+                            <div class="gameImg" id="mt"></div>
+                        </a>
+                        <div class="gameDsc">
+                            <h2>IT Memory</h2>
+                            <h2>500 pts</h2>
+                        </div>
+                    </div>
+                    <div class="selectionGame">
+                        <a href="./Pages/GamesHtml/WordWar.html">
+                            <div class="gameImg" id="ws"></div>
+                        </a>
+                        <div class="gameDsc">
+                            <h2>Word War</h2>
+                            <h2>350 pts</h2>
+                        </div>
+                    </div>
+                    <div class="selectionGame">
+                        <a href="./Pages/GamesHtml/JSClash.html">
+                            <div class="gameImg" id="jc"></div>
+                        </a>
+                        <div class="gameDsc">
+                            <h2>JS Clash</h2>
+                            <h2>200 pts</h2>
+                        </div>
+                    </div>
+                    <div class="selectionGame">
+                        <a href="./Pages/GamesHtml/MemoryMatch.html">
+                            <div class="gameImg" id="mt"></div>
+                        </a>
+                        <div class="gameDsc">
+                            <h2>IT Memory</h2>
+                            <h2>500 pts</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footerSection">
+            <div class="footerHeader">
+                <h1>SS</h1>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js-script/Main/General.js"></script>
+    <script src="./js-script/Main/Loader.js"></script>
+    <script src="./js-script/Storage/DefaultStore.js"></script>
+</body>
+</html>

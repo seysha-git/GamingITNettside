@@ -1,0 +1,60 @@
+/*Top navigation styling*/
+.frontNav{
+    padding-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.userInfo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    
+}
+.userInfo h3{
+    font-size: 23px;
+    padding-top: 0.1em;
+}
+.userInfo h3::first-letter{
+    text-transform: uppercase;
+}
+.userInfo i{
+    transition: 300ms ease-in;
+}
+.userInfo i:hover{
+    transform: translateY(-3px);
+}
+
+
+#userPoints{
+    font-size: 0.9em;
+}
+
+#settingI{
+    cursor: pointer;
+    transition: 250ms ease-in;
+}
+
+#settingI:hover{
+    color: rgb(78, 58, 153);
+}
+
+/* Mediq queries */
+
+
+@media (max-width: 450px){
+    .userInfo h3{
+        font-size: 18px;
+        padding-top: 0.1em;
+    }
+    .frontNav{
+        padding-top: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5em;
+        
+    }
+}

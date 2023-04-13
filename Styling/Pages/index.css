@@ -1,0 +1,355 @@
+@import url("../Components/Root.css");
+@import url("../Components/Modals.css");
+@import url("../Components/Header.css");
+@import url('../Components/Footer.css');
+@import url('../Animations/Animations.css');
+
+/* Main section infrastructure */
+
+.mainSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.mainTop{
+    display: grid;
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 70% 30%;
+    gap: 2em;
+    grid-template-rows: 300px;
+    grid-template-areas:
+    'm l'
+    ;
+}
+.welcomeMain {
+    grid-area: m;
+    border-radius: 50px;
+    background-image: url('../../Images/Front/mainImg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    animation: slideshow 15s ease-in-out infinite;
+  }
+
+  
+  .welcomeMain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: -1; 
+    border-radius: inherit; 
+  }
+
+.leaderboardMain{
+    padding-right:1em ;
+    grid-area: l;
+    background-color: #140F33;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.settingIcon{
+    margin-right: 1em;
+}
+
+.userInfo{
+    margin-left: 2em;
+}
+
+/* Main top */
+
+.welcomeMain{
+    padding: 1em 4em;
+    z-index: 1;
+}
+  
+.welcomeMain h1 {
+    font-size: 3.6em;
+    word-spacing: 0.015em;
+  }
+  #subTitle{
+    font-size: 0.9em;
+  }
+  
+  .welcomeMain p {
+    margin-top: -1.3em;
+    font-size: bold;
+    font-size: 23px; 
+    max-width: 100%;
+  }
+   
+
+.leaderboardMain{
+    padding: 0 3em;
+}
+
+.leaderboardTitle{
+    padding-top: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.leaderboardTitle i{
+    margin-top: -0.3em;
+}
+.playerInfo i{
+    margin-top: -0.4em;
+}
+
+.leaderboardRanking{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.player:first-child{
+    background-color: #222256;
+}
+.player,
+.playerInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playerInfo{
+    gap: 0.8em;
+    padding-left: 1em;
+}
+.player{
+    gap: 2em;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #1D1D3C;
+    padding: 0.6em;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* Main Bottom */
+.mainBottom{
+    width: 93%;
+    margin: 0 auto;
+}
+
+.selectionHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scrollOptions{
+    display: none;
+    display: flex;
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.selectionTitle h1{
+    font-size: 30px;;
+} 
+.selectionGames{
+    display: flex;
+    gap: 5em;
+    overflow-y: hidden;
+    padding-bottom: 5em;
+    scroll-behavior: smooth;
+}
+
+.gameImg{
+    height: 200px;
+    background-position: center;
+    background-image: url('../../Images/Games/FrontImages/tic-tac-toe-g1832b3930_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius:  10px;
+    border-top-left-radius: 10px;
+    transition: 250ms ease-in;
+}
+
+#ttt{
+    background-image: url('../../Images/Games/FrontImages/tic-tac-toe-g1832b3930_1920.jpg');
+}
+#ws{
+    background-image: url('../../Images/Games/FrontImages/pexels-pixabay-278887.jpg');
+}
+#jc{
+    background-image: url('../../Images/Games/FrontImages/pexels-kevin-ku-577585.jpg');
+}
+#mt{
+    background-image: url('../../Images/Games/FrontImages/pexels-shvets-production-7562023.jpg');
+}
+
+.gameDsc{
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    border-radius: 5px;
+    background-color: #1D1D3C;
+}
+.gameDsc h2{
+    font-size: 1.2em;
+    
+    animation: fadeTextIn 500ms ease-in-out ;
+}
+.gameRating{
+    display: flex;
+    gap: 0.5em;
+    padding-right: 1em;
+    align-items: center;
+}
+.selectionGame{
+    min-width: 300px;
+    max-width: 500px ;
+    transition: 300ms ease-in;
+}
+
+.selectionGame:hover{
+    transform: translateY(-5px);
+}
+
+.player h3{
+    font-size: 15px;
+}
+
+ /* Loader */
+
+ main,
+ header,
+ footer{
+     display: none;
+ }
+ .loader {
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     z-index: 1;
+     width: 100px;
+     height: 100px;
+     margin: -76px 0 0 -76px;
+     border: 16px solid #3d0c97;
+     border-radius: 50%;
+     border-top: 16px solid #2e0e5d;
+     -webkit-animation: spin 2s linear infinite;
+     animation: spin 2s linear infinite;
+   }
+
+/* Media Queries for front page */
+
+@media (max-width: 1024px) {
+    .welcomeMain{
+        padding: 5em 4em;
+        z-index: 1;
+    }
+    .welcomeMain h1 {
+      font-size: 3em;
+      max-width: 70%;
+      margin: 0em auto;
+      text-align: center;
+    }
+
+  
+    .welcomeMain p {
+      font-size: 1.5em;
+      margin: 0.5em auto;
+      text-align: center; 
+      max-width: 70%;
+    }
+    .mainTop{
+        display: grid;
+        width: 95%;
+        margin: 0 auto;
+        gap: 2em;
+        height: 800px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+        'm'
+        'l'
+        ;
+       
+    }
+    .mainSection{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+  }
+  
+@media (max-width: 600px){
+    .welcomeMain h1 {
+        font-size: 2.7em;
+        max-width: 60%;
+        margin: -0.5em auto;
+        text-align: center;
+      }
+      .welcomeMain{
+        padding: 5em 1.8em;
+        z-index: 1;
+    }
+    .welcomeMain p{
+        padding-top: 0.6em;
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 450px){
+    .welcomeMain h1 {
+        font-size: 2.4em;
+        max-width: 60%;
+        margin: 0em auto;
+        text-align: center;
+      }
+      .welcomeMain{
+        padding: 5em 0em;
+        z-index: 1;
+    }
+    .loader {
+        display: block;
+        position: absolute;
+        left: 53%;
+        top: 50%;
+        z-index: 1;
+        width: 100px;
+        height: 100px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #3d0c97;
+        border-radius: 50%;
+        border-top: 16px solid #2e0e5d;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+      .welcomeMain p {
+        padding-top: 0;
+        font-size: 1.15em;
+      }
+      .selectionGame{
+        min-width: 290px;
+       
+    }
+    .gameDsc{
+        gap: 6em;
+    }
+    .gameDsc h2{
+        font-size: 1.05em;
+        
+        animation: fadeTextIn 500ms ease-in-out ;
+    }
+   
+}
+

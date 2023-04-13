@@ -1,0 +1,51 @@
+/*Animations styling page */
+
+@keyframes slideshow {
+    0% {
+        background-image: url('../../Images/Front/mainImg.jpg');
+    }
+    33% {
+        background-image: url('../../Images/Front/mainImg2.jpg');
+    }
+    66% {
+        background-image: url('../../Images/Front/mainImg3.jpg');
+    }
+    100% {
+        background-image: url('../../Images/Front/mainImg.jpg');
+    }
+  }
+
+
+
+  @keyframes fadeTextIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes shake {
+    0%, 100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-12px);
+    }
+    40%{
+        transform: translateX(12px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+  }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../../Styling/Pages/JSClash.css">
+</head>
+<body>
+    <header class="blurBackground">
+        <nav class="frontNav">
+            <div class="userInfo">
+                <div id="userIcon">
+                      <i class="fa-solid fa-circle-user fa-2x" id="userIcon"></i>
+                </div>
+                <h3><span id="userName">Lag din profil</span> <span id="userPoints"></span></h3>
+            </div>
+            <div class="settingIcon">
+                <i class="fa-solid fa-bars fa-2x" id="settingI"></i>
+            </div>
+        </nav>
+    </header>
+       <!-- Start Modal-->
+    <figure>
+        <div class="modalFigure" id="startModal" >
+            <div class="modalHeader">
+                <h2>
+                    Hei, klar for å teste JS evnene dine?
+                </h2>    
+                <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+            </div>
+            <div class="modalInfo">
+                <p>
+                    Du må svare minst 6/8 spørsmål riktig for å vinne.
+                    Svarer du mindre enn dette vil du ikke få max poeng.
+                   </p>
+            </div>
+            <div class="modalBtn">
+                <button class="signIn titleEffect" type="button">Spill</button>
+            </div>
+        </div>
+    </figure>
+       <!-- Finish Modal-->
+    <figure>
+        <div class="modalFigure" id="finishModal" >
+            <div class="modalHeader">
+                <h2 id="finishTitle"></h2>
+            </div>
+            <div class="modalInfo">
+                <p id="finishPara"></p>
+            </div>
+            <div class="modalBtn" id="finishButtons">
+                <button class="signIn titleEffect" id="Again" type="button">Again</button>
+                <a href="../../index.html">
+                    <button class="signIn titleEffect" type="button">Home</button>
+                </a>
+            </div>
+            </div>
+        </div>
+    </figure>
+       <!-- Settings Modal-->
+    <figure>
+        <div class="modalFigure" id="settingModal">
+            <div class="modalHeader" id="settingHeader">
+                <h2>Vår meny</h2>
+                <div class="exitSetting">
+                    <i class="fa-solid fa-circle-xmark fa-2x" id="modalExit"></i>
+                </div>
+                
+            </div>
+            <div class="modalLogIn" id="settingContent">
+                <div class="homeOption">
+                    <a href="https://viken.no/nadderud-vgs/">
+                        <h2>Spill historie</h2>
+                    </a>
+                  
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html">
+                        <h2>Hjem</h2>
+                    </a>
+                   
+                </div>
+                <div class="homeOption">
+                    <a href="../../index.html" id="signOut">
+                        <h2>Logg ut</h2>
+                    </a>
+                   
+                </div>
+        </div>
+        <div class="settingText">
+            <p>"If you have any questions or need further assistance, please don't hesitate to contact me at [your email address].</p>
+        </div>
+    </figure>
+    <main class="blurBackground">
+        <div class="gameSection">
+           <div class="gameTitle">
+             <h1>JS Clash</h1>
+             
+           </div>
+           <div class="gameContainer">
+                <div class="questionContainer">
+                    <h2 id="question"><span id="questionNumber"></span>. Hva blir outputten når følgende kode blir kjørt</h2>
+                    <img  id="questionImg" src="../../Images/Games/QuizImages/Img8.png">
+                </div>
+                <div class="buttons-options">
+                    <div class="answer-buttons">
+                        <button class="answerBtn" id="answer1">Answer 1</button>
+                        <button class="answerBtn" id="answer2">Answer 2</button>
+                        <button class="answerBtn" id="answer3">Answer 3</button>
+                        <button class="answerBtn" id="answer4">Answer 4</button>
+                </div>
+                <div class="nxtButton">
+                    <button class="nxtBtn">Neste</button>
+                </div>    
+           </div>
+        </div>
+    </main>
+    <footer class="blurBackground">
+        <div class="footerSection">
+            <div class="footerHeader">
+                <h1>SS</h1>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js-script/GamesJs/JSClash.js"></script>
+    <script src="../../js-script/GamesJs/ModalGames.js"></script>
+</body>

@@ -1,0 +1,147 @@
+@import url("../Components/Root.css");
+@import url("../Components/Modals.css");
+@import url("../Components/Header.css");
+@import url("../Components/Footer.css");
+@import url('../Animations/Animations.css');
+
+
+.gameSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5em;
+   padding-bottom: 6em;
+}
+
+.gameTitle{
+    font-size: 40px;
+}
+.questionContainer{
+    margin-top: -3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.questionContainer h2{
+    text-align: center;
+    font-weight: lighter;
+}
+.questionContainer img{
+    height: 200px;
+    width: 450px;
+    border-radius: 20px;
+    filter: brightness(0.8);
+}
+.buttons-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.answer-buttons{
+    padding-top: 2em;;
+    display: grid;
+    place-content: center;
+    gap: 1.5em;
+    grid-template-areas: 
+    't1 t2'
+    'b1 b2';
+}
+
+#answer1{
+    grid-area: t1;
+}
+#answer2{
+    grid-area: t2;
+}
+#answer3{
+    grid-area: b1;
+}
+#answer4{
+    grid-area: b2;
+}
+.answerBtn{
+    height: 50px;
+    width: 200px;
+    background-color: #380e72;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #9381FF;
+    border: none;
+    outline: none;
+    transition: 300ms ease-in;
+    cursor: pointer;
+}
+.answerBtn:hover:not([disabled]){
+    background-color:rgb(83, 68, 152);
+    color:blacK;
+}
+.answerBtn:disabled{
+    cursor: no-drop;
+}
+
+.correct{
+    background-color: rgb(4, 123, 52);
+}
+.incorrect{
+    background-color: rgb(130, 15, 15);
+}
+
+.nxtBtn{
+    margin-top: -0.5em;
+    padding: 0.3em 2em;
+    border-radius: 10px;
+    background-color: #452596;  
+    transition: 300ms ease-in;
+    color: #9381FF;
+    font-size: 20px;
+    cursor: pointer;
+}
+.nxtBtn:hover{
+    background-color: #6734bf;
+    color: white;
+}
+
+
+/* Media Queries for Quiz Game */
+
+@media screen and (max-width: 480px) {
+    .gameTitle{
+        font-size: 30px;
+    }
+    .questionContainer h2{
+        font-size: 20px;
+        max-width: 80%;
+    }
+    .answer-buttons{
+        gap: 1em;
+    }
+    .answerBtn{
+        height: 50px;
+        width: 160px;
+        font-size: 18px;
+      
+    }
+    .questionContainer img{
+        max-width: 95%;
+    }
+    
+}
+
+@media screen and (max-width: 380px) {
+    .answerBtn{
+        height: 50px;
+        width: 125px;
+        font-size: 16px;
+      
+    }
+    .questionContainer img{
+        height: 200px;
+        width: 450px;
+        border-radius: 20px;
+        filter: brightness(0.8);
+        max-width: 93%;
+    }
+}
